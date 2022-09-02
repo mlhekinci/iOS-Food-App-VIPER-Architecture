@@ -14,6 +14,20 @@ class MainInteractor : PresenterToInteractorMainProtocol {
     var mainPresenter: InteractorToPresenterMainProtocol?
     
     func getFoodList() {
-        // get food from API
+        AF.request("http://kasimadalan.pe.hu/yemekler/tumYemekleriGetir.php", method: .get).response { response in
+            if let data = response.data {
+                
+                do {
+                    let result = try JSONDecoder().decode(YemeklerCevap.self, from: data)
+                    
+                    if let foodList = result.yemekler {
+                        self.mainPresenter?.dataToPresenter(foodList: foodList)
+                    }
+                    
+                }catch {
+                    print("Error: \(error.localizedDescription)")
+                }
+            }
+        }
     }
 }

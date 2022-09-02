@@ -22,11 +22,11 @@ protocol PresenterToInteractorMainProtocol {
 }
 
 protocol InteractorToPresenterMainProtocol {
-    func dataToPresenter(foodList: Array<Food>)
+    func dataToPresenter(foodList: Array<Yemekler>)
 }
 
 protocol PresenterToViewMainProtocol {
-    func dataToView(foodList: Array<Food>)
+    func dataToView(foodList: Array<Yemekler>)
 }
 
 protocol PresenterToRouterMainProtocol {

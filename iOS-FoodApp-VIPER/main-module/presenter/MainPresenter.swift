@@ -18,7 +18,7 @@ class MainPresenter : ViewToPresenterMainProtocol {
 }
 
 extension MainPresenter : InteractorToPresenterMainProtocol {
-    func dataToPresenter(foodList: Array<Food>) {
+    func dataToPresenter(foodList: Array<Yemekler>) {
         mainView?.dataToView(foodList: foodList)
     }
 }

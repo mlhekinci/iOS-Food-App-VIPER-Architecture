@@ -15,11 +15,12 @@
 		D468885128C2732B00AB2301 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D468884F28C2732B00AB2301 /* LaunchScreen.storyboard */; };
 		D468885B28C27B4700AB2301 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D468885A28C27B4700AB2301 /* Alamofire */; };
 		D468886628C27C2F00AB2301 /* MainProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D468886528C27C2F00AB2301 /* MainProtocol.swift */; };
-		D468886B28C27DC000AB2301 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = D468886A28C27DC000AB2301 /* Food.swift */; };
-		D468886F28C27F1F00AB2301 /* FoodResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D468886E28C27F1F00AB2301 /* FoodResult.swift */; };
 		D468887228C27FB200AB2301 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D468887128C27FB200AB2301 /* MainInteractor.swift */; };
 		D468887528C27FF200AB2301 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D468887428C27FF200AB2301 /* MainPresenter.swift */; };
 		D468887928C280B300AB2301 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D468887828C280B300AB2301 /* MainRouter.swift */; };
+		D468887D28C28F4B00AB2301 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D468887C28C28F4B00AB2301 /* MainTableViewCell.swift */; };
+		D468888128C297AA00AB2301 /* YemeklerCevap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D468887F28C297AA00AB2301 /* YemeklerCevap.swift */; };
+		D468888228C297AA00AB2301 /* Yemekler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D468888028C297AA00AB2301 /* Yemekler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,11 +33,12 @@
 		D468885028C2732B00AB2301 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D468885228C2732B00AB2301 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D468886528C27C2F00AB2301 /* MainProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProtocol.swift; sourceTree = "<group>"; };
-		D468886A28C27DC000AB2301 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
-		D468886E28C27F1F00AB2301 /* FoodResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodResult.swift; sourceTree = "<group>"; };
 		D468887128C27FB200AB2301 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
 		D468887428C27FF200AB2301 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		D468887828C280B300AB2301 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		D468887C28C28F4B00AB2301 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		D468887F28C297AA00AB2301 /* YemeklerCevap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YemeklerCevap.swift; sourceTree = "<group>"; };
+		D468888028C297AA00AB2301 /* Yemekler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yemekler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 		D468886328C27BD300AB2301 /* table */ = {
 			isa = PBXGroup;
 			children = (
+				D468887C28C28F4B00AB2301 /* MainTableViewCell.swift */,
 			);
 			path = table;
 			sourceTree = "<group>";
@@ -137,8 +140,8 @@
 		D468886928C27DAC00AB2301 /* entity */ = {
 			isa = PBXGroup;
 			children = (
-				D468886A28C27DC000AB2301 /* Food.swift */,
-				D468886E28C27F1F00AB2301 /* FoodResult.swift */,
+				D468888028C297AA00AB2301 /* Yemekler.swift */,
+				D468887F28C297AA00AB2301 /* YemeklerCevap.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -227,11 +230,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D468886F28C27F1F00AB2301 /* FoodResult.swift in Sources */,
 				D468886628C27C2F00AB2301 /* MainProtocol.swift in Sources */,
 				D468884928C2732B00AB2301 /* HomeController.swift in Sources */,
+				D468888128C297AA00AB2301 /* YemeklerCevap.swift in Sources */,
 				D468887528C27FF200AB2301 /* MainPresenter.swift in Sources */,
-				D468886B28C27DC000AB2301 /* Food.swift in Sources */,
+				D468887D28C28F4B00AB2301 /* MainTableViewCell.swift in Sources */,
+				D468888228C297AA00AB2301 /* Yemekler.swift in Sources */,
 				D468884528C2732B00AB2301 /* AppDelegate.swift in Sources */,
 				D468887228C27FB200AB2301 /* MainInteractor.swift in Sources */,
 				D468884728C2732B00AB2301 /* SceneDelegate.swift in Sources */,

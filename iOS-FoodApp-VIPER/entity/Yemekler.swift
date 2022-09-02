@@ -1,13 +1,11 @@
-//
-//  Food.swift
-//  iOS-FoodApp-VIPER
+
 //
 //  Created by Melih on 2.09.2022.
 //
 
 import Foundation
 
-class Food : Codable {
+class Yemekler : Codable {
     var yemek_id: String?
     var yemek_adi: String?
     var yemek_resim_adi: String?
