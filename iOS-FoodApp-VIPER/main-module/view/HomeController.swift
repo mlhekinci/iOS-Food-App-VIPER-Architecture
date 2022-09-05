@@ -9,7 +9,7 @@ import UIKit
 
 class HomeController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     var mainPresenterObject: ViewToPresenterMainProtocol?
     var foodList = [Yemekler]()
@@ -17,9 +17,17 @@ class HomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         MainRouter.createModule(ref: self)
+        collectionView.dataSource = self
+        collectionView.delegate = self
         
-        tableView.dataSource = self
-        tableView.delegate = self
+        let design = UICollectionViewFlowLayout()
+        design.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        design.minimumInteritemSpacing = 10
+        design.minimumLineSpacing = 10
+        let height = collectionView.frame.size.width
+        let cellWidth = (height - 30) / 2
+        design.itemSize = CGSize(width: cellWidth, height: cellWidth * 1.5)
+        collectionView.collectionViewLayout = design
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,26 +39,29 @@ extension HomeController: PresenterToViewMainProtocol {
     func dataToView(foodList: Array<Yemekler>) {
         self.foodList = foodList
         DispatchQueue.main.async {
-            self.tableView.reloadData()
+            self.collectionView.reloadData()
         }
     }
 }
 
-extension HomeController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension HomeController: UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return foodList.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let food = foodList[indexPath.row]
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let food  = foodList[indexPath.row]
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "testCell", for: indexPath) as! MainTableViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "foodCell", for: indexPath) as! FoodCollectionViewCell
+
+        cell.showImage(imageName: food.yemek_resim_adi!)
+        cell.title.text = food.yemek_adi!
         
-        cell.label.text = food.yemek_adi
+        cell.layer.cornerRadius = 8
+        cell.layer.borderWidth = 0.5
+        cell.layer.borderColor = UIColor.gray.cgColor
         
         return cell
     }
-    
-    
 }
 
