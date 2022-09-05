@@ -76,11 +76,83 @@
                     <navigationItem key="navigationItem" title="Foods" id="ZNw-Ud-QRW"/>
                     <connections>
                         <outlet property="collectionView" destination="cAB-QL-5dU" id="0en-sZ-xNd"/>
+                        <segue destination="MZZ-ef-V1Q" kind="show" identifier="toFoodDetail" id="hM6-bq-Qev"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2933.3333333333335" y="14.732142857142856"/>
+            <point key="canvasLocation" x="-3923" y="596"/>
+        </scene>
+        <!--Detail Controller-->
+        <scene sceneID="TMV-SD-1xO">
+            <objects>
+                <viewController id="MZZ-ef-V1Q" customClass="DetailController" customModule="iOS_FoodApp_VIPER" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eEx-sg-n1G">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CUm-gL-PiR">
+                                <rect key="frame" x="8" y="140" width="398" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="pt3-KF-YSZ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQc-Ke-ELd">
+                                <rect key="frame" x="32" y="388" width="55.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9s-VL-YeL">
+                                <rect key="frame" x="32" y="432" width="50.5" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPs-SG-0Js">
+                                <rect key="frame" x="16" y="523.5" width="382" height="50"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ayc-gq-HZA"/>
+                                </constraints>
+                                <state key="normal" title="ADD TO CART">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="12"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addToCartTapped:" destination="MZZ-ef-V1Q" eventType="touchUpInside" id="z29-jK-Ytn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="re6-LU-Bl1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="e9s-VL-YeL" firstAttribute="top" secondItem="cQc-Ke-ELd" secondAttribute="bottom" constant="8" id="9rJ-if-ZYV"/>
+                            <constraint firstItem="re6-LU-Bl1" firstAttribute="trailing" secondItem="yPs-SG-0Js" secondAttribute="trailing" constant="16" id="BvC-Jx-kJp"/>
+                            <constraint firstItem="cQc-Ke-ELd" firstAttribute="leading" secondItem="re6-LU-Bl1" secondAttribute="leading" constant="32" id="NNo-ab-4Qj"/>
+                            <constraint firstItem="yPs-SG-0Js" firstAttribute="centerX" secondItem="eEx-sg-n1G" secondAttribute="centerX" id="UKw-0j-UZZ"/>
+                            <constraint firstItem="yPs-SG-0Js" firstAttribute="top" secondItem="e9s-VL-YeL" secondAttribute="bottom" constant="64" id="WEd-Ba-ofW"/>
+                            <constraint firstItem="e9s-VL-YeL" firstAttribute="leading" secondItem="re6-LU-Bl1" secondAttribute="leading" constant="32" id="n1Q-Zj-vJl"/>
+                            <constraint firstItem="CUm-gL-PiR" firstAttribute="top" secondItem="re6-LU-Bl1" secondAttribute="top" id="no2-7R-ZhW"/>
+                            <constraint firstItem="re6-LU-Bl1" firstAttribute="trailing" secondItem="CUm-gL-PiR" secondAttribute="trailing" constant="8" id="ok0-TK-zE1"/>
+                            <constraint firstItem="CUm-gL-PiR" firstAttribute="centerX" secondItem="eEx-sg-n1G" secondAttribute="centerX" id="pI6-3Q-JUJ"/>
+                            <constraint firstItem="cQc-Ke-ELd" firstAttribute="top" secondItem="CUm-gL-PiR" secondAttribute="bottom" constant="48" id="qr6-Lr-m9Q"/>
+                            <constraint firstItem="CUm-gL-PiR" firstAttribute="leading" secondItem="re6-LU-Bl1" secondAttribute="leading" constant="8" id="sDH-eB-jq7"/>
+                            <constraint firstItem="yPs-SG-0Js" firstAttribute="leading" secondItem="re6-LU-Bl1" secondAttribute="leading" constant="16" id="ztd-yp-43p"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2gZ-dW-fmv"/>
+                    <connections>
+                        <outlet property="foodImage" destination="CUm-gL-PiR" id="EGj-7t-EEN"/>
+                        <outlet property="priceLabel" destination="e9s-VL-YeL" id="UFL-03-d9X"/>
+                        <outlet property="titleLabel" destination="cQc-Ke-ELd" id="ZSK-fR-7jQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jaq-Ah-nVe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3148" y="596"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Suj-CO-lWR">
@@ -98,12 +170,15 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qTf-tE-OrI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3842" y="15"/>
+            <point key="canvasLocation" x="-4035" y="-125"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

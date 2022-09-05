@@ -63,5 +63,20 @@ extension HomeController: UICollectionViewDataSource, UICollectionViewDelegate {
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let food = foodList[indexPath.row]
+        performSegue(withIdentifier: "toFoodDetail", sender: food)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toFoodDetail" {
+            if let food = sender as? Yemekler {
+                let targetController = segue.destination as! DetailController
+                targetController.foods = food
+            }
+        }
+    }
 }
 
