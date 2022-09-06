@@ -14,10 +14,8 @@ class FoodCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var title: UILabel!
     
         func showImage(imageName: String) {
-        if let url = URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(imageName)") {
             DispatchQueue.main.async {
-                self.image.kf.setImage(with: url)
+                self.image.setNetworkImage(imageName: imageName)
             }
-        }
     }
 }

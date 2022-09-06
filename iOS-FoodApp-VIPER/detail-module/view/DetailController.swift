@@ -9,16 +9,23 @@ import UIKit
 
 class DetailController: UIViewController {
     
+    var foods: Yemekler?
+    var detailPresenterObject: ViewToPresenterDetailProtocol?
+    
     @IBOutlet weak var foodImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
-    
-    
-    var foods: Yemekler?
+    @IBOutlet weak var stepper: UIStepper!
+    @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var totalPriceLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        DetailRouter.createModule(ref: self)
        
+        stepper.value = 1
+        countLabel.text = "Product Count: \(Int(stepper.value))"
+        
         if let food = foods {
             self.navigationItem.title = "View \(food.yemek_adi!) Product"
             foodImage.setNetworkImage(imageName: food.yemek_resim_adi!)
@@ -27,7 +34,16 @@ class DetailController: UIViewController {
         }
     }
     
+
+    @IBAction func stepperControl(_ sender: UIStepper) {
+        countLabel.text = "Product Count: \(Int(sender.value))"
+        totalPriceLabel.text =  "Total: \( Int(sender.value) * Int((foods?.yemek_fiyat)!)!)₺"
+    }
+    
     @IBAction func addToCartTapped(_ sender: Any) {
+        //MARK: USE if let
+        //MARK: TAKE USERNAME FROM LOGIN MODULE
         
+        detailPresenterObject?.add(yemek_adi: (foods?.yemek_adi)!, yemek_resim_adi: (foods?.yemek_resim_adi)!, yemek_fiyat: (foods?.yemek_fiyat)!, yemek_siparis_adet: Int(self.stepper.value), kullanici_adi: "mmlhek")
     }
 }

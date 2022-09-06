@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D405500C28C784F5005DEAD0 /* DetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D405500B28C784F5005DEAD0 /* DetailProtocol.swift */; };
+		D405500F28C7865D005DEAD0 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D405500E28C7865D005DEAD0 /* DetailInteractor.swift */; };
+		D405501228C78688005DEAD0 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D405501128C78688005DEAD0 /* DetailPresenter.swift */; };
+		D405501528C78710005DEAD0 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D405501428C78710005DEAD0 /* DetailRouter.swift */; };
 		D468884528C2732B00AB2301 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D468884428C2732B00AB2301 /* AppDelegate.swift */; };
 		D468884728C2732B00AB2301 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D468884628C2732B00AB2301 /* SceneDelegate.swift */; };
 		D468884928C2732B00AB2301 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D468884828C2732B00AB2301 /* HomeController.swift */; };
@@ -27,6 +31,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D405500B28C784F5005DEAD0 /* DetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProtocol.swift; sourceTree = "<group>"; };
+		D405500E28C7865D005DEAD0 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		D405501128C78688005DEAD0 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		D405501428C78710005DEAD0 /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
 		D468884128C2732B00AB2301 /* iOS-FoodApp-VIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-FoodApp-VIPER.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D468884428C2732B00AB2301 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D468884628C2732B00AB2301 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -177,6 +185,7 @@
 		D4E744F628C6448A00E0EF24 /* protocol */ = {
 			isa = PBXGroup;
 			children = (
+				D405500B28C784F5005DEAD0 /* DetailProtocol.swift */,
 			);
 			path = protocol;
 			sourceTree = "<group>";
@@ -184,6 +193,7 @@
 		D4E744F728C6448F00E0EF24 /* interactor */ = {
 			isa = PBXGroup;
 			children = (
+				D405500E28C7865D005DEAD0 /* DetailInteractor.swift */,
 			);
 			path = interactor;
 			sourceTree = "<group>";
@@ -191,6 +201,7 @@
 		D4E744F828C6449500E0EF24 /* presenter */ = {
 			isa = PBXGroup;
 			children = (
+				D405501128C78688005DEAD0 /* DetailPresenter.swift */,
 			);
 			path = presenter;
 			sourceTree = "<group>";
@@ -198,6 +209,7 @@
 		D4E744F928C6449D00E0EF24 /* router */ = {
 			isa = PBXGroup;
 			children = (
+				D405501428C78710005DEAD0 /* DetailRouter.swift */,
 			);
 			path = router;
 			sourceTree = "<group>";
@@ -297,15 +309,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4E744B528C61ED900E0EF24 /* FoodCollectionViewCell.swift in Sources */,
+				D405501528C78710005DEAD0 /* DetailRouter.swift in Sources */,
 				D468886628C27C2F00AB2301 /* MainProtocol.swift in Sources */,
 				D4E744FC28C644CB00E0EF24 /* DetailController.swift in Sources */,
 				D468884928C2732B00AB2301 /* HomeController.swift in Sources */,
+				D405500C28C784F5005DEAD0 /* DetailProtocol.swift in Sources */,
 				D468888128C297AA00AB2301 /* YemeklerCevap.swift in Sources */,
 				D468887528C27FF200AB2301 /* MainPresenter.swift in Sources */,
 				D468888228C297AA00AB2301 /* Yemekler.swift in Sources */,
+				D405501228C78688005DEAD0 /* DetailPresenter.swift in Sources */,
 				D468884528C2732B00AB2301 /* AppDelegate.swift in Sources */,
 				D4E7450128C647C200E0EF24 /* ImageEx.swift in Sources */,
 				D468887228C27FB200AB2301 /* MainInteractor.swift in Sources */,
+				D405500F28C7865D005DEAD0 /* DetailInteractor.swift in Sources */,
 				D468884728C2732B00AB2301 /* SceneDelegate.swift in Sources */,
 				D468887928C280B300AB2301 /* MainRouter.swift in Sources */,
 			);
