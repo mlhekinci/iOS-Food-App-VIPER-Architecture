@@ -25,6 +25,7 @@ class DetailController: UIViewController {
        
         stepper.value = 1
         countLabel.text = "Product Count: \(Int(stepper.value))"
+        totalPriceLabel.text = "Total: \((foods?.yemek_fiyat!)!) ₺"
         
         if let food = foods {
             self.navigationItem.title = "View \(food.yemek_adi!) Product"
