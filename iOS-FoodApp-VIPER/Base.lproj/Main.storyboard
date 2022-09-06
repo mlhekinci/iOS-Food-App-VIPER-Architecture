@@ -57,7 +57,7 @@
                                                 <constraint firstItem="Gls-iF-3qI" firstAttribute="top" secondItem="3ju-hZ-yrX" secondAttribute="top" constant="8" id="qac-Xu-KSt"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                        <color key="backgroundColor" red="0.61960784313725492" green="0.61960784313725492" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="image" destination="Gls-iF-3qI" id="eK6-rU-emL"/>
                                             <outlet property="title" destination="z8l-PE-f29" id="Hdp-px-q6J"/>
@@ -75,7 +75,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cAB-QL-5dU" secondAttribute="trailing" id="xMT-EM-KK6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Foods" id="ZNw-Ud-QRW"/>
+                    <navigationItem key="navigationItem" title="Foods" id="ZNw-Ud-QRW">
+                        <barButtonItem key="rightBarButtonItem" image="cart.fill" catalog="system" id="qlS-lk-pi5">
+                            <connections>
+                                <segue destination="8ZR-KW-m07" kind="show" id="t01-VI-Ler"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="cAB-QL-5dU" id="0en-sZ-xNd"/>
                         <segue destination="MZZ-ef-V1Q" kind="show" identifier="toFoodDetail" id="hM6-bq-Qev"/>
@@ -183,6 +189,22 @@
             </objects>
             <point key="canvasLocation" x="-3148" y="596"/>
         </scene>
+        <!--Cart Controller-->
+        <scene sceneID="IMQ-Ti-jxW">
+            <objects>
+                <viewController id="8ZR-KW-m07" customClass="CartController" customModule="iOS_FoodApp_VIPER" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rEd-Db-vR2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Bgl-tg-OHL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WKM-Kt-1fr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Es3-Zk-wjV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2341" y="596"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Suj-CO-lWR">
             <objects>
@@ -204,14 +226,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cart.fill" catalog="system" width="128" height="102"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

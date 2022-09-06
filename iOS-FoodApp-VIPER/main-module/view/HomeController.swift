@@ -19,6 +19,7 @@ class HomeController: UIViewController {
         MainRouter.createModule(ref: self)
         collectionView.dataSource = self
         collectionView.delegate = self
+        setupNavBar()
         
         let design = UICollectionViewFlowLayout()
         design.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
@@ -32,6 +33,18 @@ class HomeController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         mainPresenterObject?.getFoods()
+    }
+    
+    func setupNavBar() {
+        let navbarAppearence = UINavigationBarAppearance()
+        self.navigationController?.navigationBar.tintColor = .white
+        navbarAppearence.backgroundColor = UIColor(displayP3Red: 47/255, green: 54/255, blue: 64/255, alpha: 1.0)
+        navbarAppearence.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navbarAppearence.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.standardAppearance = navbarAppearence
+        navigationController?.navigationBar.scrollEdgeAppearance = navbarAppearence
     }
 }
 
