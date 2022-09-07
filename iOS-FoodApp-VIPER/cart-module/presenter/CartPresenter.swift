@@ -13,9 +13,11 @@ class CartPresenter: ViewToPresenterCartProtocol {
     var cartView: PresenterToViewCartProtocol?
     
     func getAllCart() {
+        cartInteractor?.getAllCartList()
     }
     
     func delete(id: String) {
+        cartInteractor?.deleteProduct(id: id)
     }
 }
 
