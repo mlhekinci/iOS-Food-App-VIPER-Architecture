@@ -27,7 +27,7 @@ class HomeController: UIViewController {
         design.minimumLineSpacing = 10
         let height = collectionView.frame.size.width
         let cellWidth = (height - 30) / 2
-        design.itemSize = CGSize(width: cellWidth, height: cellWidth * 1.5)
+        design.itemSize = CGSize(width: cellWidth, height: cellWidth * 1.4)
         collectionView.collectionViewLayout = design
     }
     

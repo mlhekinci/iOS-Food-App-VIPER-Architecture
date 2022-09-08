@@ -24,7 +24,7 @@ class DetailController: UIViewController {
         DetailRouter.createModule(ref: self)
        
         stepper.value = 1
-        countLabel.text = "Product Count: \(Int(stepper.value))"
+        countLabel.text = "Quantitiy: \(Int(stepper.value))"
         totalPriceLabel.text = "Total: \((foods?.yemek_fiyat!)!) ₺"
         
         if let food = foods {
@@ -37,7 +37,7 @@ class DetailController: UIViewController {
     
 
     @IBAction func stepperControl(_ sender: UIStepper) {
-        countLabel.text = "Product Count: \(Int(sender.value))"
+        countLabel.text = "Quantitiy: \(Int(sender.value))"
         totalPriceLabel.text =  "Total: \( Int(sender.value) * Int((foods?.yemek_fiyat)!)!)₺"
     }
     

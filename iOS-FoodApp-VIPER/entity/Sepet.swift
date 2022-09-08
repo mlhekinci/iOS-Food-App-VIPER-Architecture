@@ -8,15 +8,15 @@
 import Foundation
 
 class Sepet: Codable {
-    let sepet_yemek_id: Int?
+    let sepet_yemek_id: String?
     let yemek_adi: String?
     let yemek_resim_adi: String?
-    let yemek_fiyat: Int?
-    let yemek_siparis_adet: Int?
+    let yemek_fiyat: String?
+    let yemek_siparis_adet: String?
     let kullanici_adi: String?
     
     
-    init(sepet_yemek_id: Int, yemek_adi: String, yemek_resim_adi: String, yemek_fiyat: Int, yemek_siparis_adet: Int, kullanici_adi: String) {
+    init(sepet_yemek_id: String, yemek_adi: String, yemek_resim_adi: String, yemek_fiyat: String, yemek_siparis_adet: String, kullanici_adi: String) {
         self.sepet_yemek_id = sepet_yemek_id
         self.yemek_adi = yemek_adi
         self.yemek_resim_adi = yemek_resim_adi

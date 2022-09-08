@@ -134,14 +134,14 @@
                                 </connections>
                             </button>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="OD8-S5-ENW">
-                                <rect key="frame" x="304" y="428" width="94" height="32"/>
+                                <rect key="frame" x="304" y="425.5" width="94" height="32"/>
                                 <connections>
                                     <action selector="stepperControl:" destination="MZZ-ef-V1Q" eventType="valueChanged" id="7Bj-Y2-Cpu"/>
                                 </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANx-Bo-cte">
-                                <rect key="frame" x="361.5" y="388" width="20.5" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="379.5" y="388" width="18.5" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -160,7 +160,7 @@
                             <constraint firstItem="re6-LU-Bl1" firstAttribute="trailing" secondItem="yPs-SG-0Js" secondAttribute="trailing" constant="16" id="BvC-Jx-kJp"/>
                             <constraint firstItem="P4A-PC-UBF" firstAttribute="centerX" secondItem="eEx-sg-n1G" secondAttribute="centerX" id="I8o-5T-j3D"/>
                             <constraint firstItem="cQc-Ke-ELd" firstAttribute="leading" secondItem="re6-LU-Bl1" secondAttribute="leading" constant="32" id="NNo-ab-4Qj"/>
-                            <constraint firstItem="re6-LU-Bl1" firstAttribute="trailing" secondItem="ANx-Bo-cte" secondAttribute="trailing" constant="32" id="PLp-wc-Ru1"/>
+                            <constraint firstItem="re6-LU-Bl1" firstAttribute="trailing" secondItem="ANx-Bo-cte" secondAttribute="trailing" constant="16" id="PLp-wc-Ru1"/>
                             <constraint firstItem="yPs-SG-0Js" firstAttribute="centerX" secondItem="eEx-sg-n1G" secondAttribute="centerX" id="UKw-0j-UZZ"/>
                             <constraint firstItem="yPs-SG-0Js" firstAttribute="top" secondItem="e9s-VL-YeL" secondAttribute="bottom" constant="64" id="WEd-Ba-ofW"/>
                             <constraint firstItem="ANx-Bo-cte" firstAttribute="top" secondItem="CUm-gL-PiR" secondAttribute="bottom" constant="48" id="dSC-eb-37X"/>
@@ -189,7 +189,7 @@
             </objects>
             <point key="canvasLocation" x="-3148" y="596"/>
         </scene>
-        <!--Cart Controller-->
+        <!--My Cart-->
         <scene sceneID="IMQ-Ti-jxW">
             <objects>
                 <viewController id="8ZR-KW-m07" customClass="CartController" customModule="iOS_FoodApp_VIPER" customModuleProvider="target" sceneMemberID="viewController">
@@ -228,8 +228,8 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjl-tv-V3k">
-                                                    <rect key="frame" x="319" y="27" width="59" height="46"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <rect key="frame" x="346" y="27" width="48" height="46"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -241,7 +241,7 @@
                                                 <constraint firstItem="wcx-E2-5gO" firstAttribute="leading" secondItem="kGg-S6-nm9" secondAttribute="trailing" constant="16" id="S9p-u3-vHt"/>
                                                 <constraint firstItem="xjl-tv-V3k" firstAttribute="top" secondItem="tGi-sX-JUn" secondAttribute="topMargin" constant="16" id="STI-ga-qef"/>
                                                 <constraint firstItem="xjl-tv-V3k" firstAttribute="centerY" secondItem="tGi-sX-JUn" secondAttribute="centerY" id="TWb-df-d6H"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="xjl-tv-V3k" secondAttribute="trailing" constant="16" id="YRj-S0-TY5"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="xjl-tv-V3k" secondAttribute="trailing" id="YRj-S0-TY5"/>
                                                 <constraint firstItem="eIp-zm-KZO" firstAttribute="top" secondItem="tGi-sX-JUn" secondAttribute="topMargin" constant="8" id="cxs-pY-p3q"/>
                                                 <constraint firstAttribute="bottom" secondItem="kGg-S6-nm9" secondAttribute="bottom" constant="8" id="rjc-x1-7zk"/>
                                                 <constraint firstItem="kGg-S6-nm9" firstAttribute="leading" secondItem="tGi-sX-JUn" secondAttribute="leading" constant="9" id="w14-gm-ddJ"/>
@@ -266,7 +266,7 @@
                             <constraint firstItem="Bgl-tg-OHL" firstAttribute="bottom" secondItem="Oq0-36-CyZ" secondAttribute="bottom" id="YCX-7g-Q0V"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="WKM-Kt-1fr"/>
+                    <navigationItem key="navigationItem" title="My Cart" id="WKM-Kt-1fr"/>
                     <connections>
                         <outlet property="cartTableView" destination="Oq0-36-CyZ" id="mCc-0Y-J0k"/>
                     </connections>
