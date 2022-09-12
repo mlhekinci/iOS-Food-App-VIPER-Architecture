@@ -45,6 +45,5 @@ class CartInteractor: PresenterToInteractorCartProtocol {
                 }
             }
         }
-        //Refreshes the list after item deletion
     }
 }
