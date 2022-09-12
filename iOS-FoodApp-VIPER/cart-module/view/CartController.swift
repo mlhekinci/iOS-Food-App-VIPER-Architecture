@@ -44,6 +44,8 @@ extension CartController: UITableViewDelegate, UITableViewDataSource {
         let product = cartList[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cartCell", for: indexPath) as! CartTableViewCell
         
+        cell.selectionStyle = .none
+        
         cell.productImage.setNetworkImage(imageName: product.yemek_resim_adi!)
         cell.productTitle.text = product.yemek_adi!
         cell.productCount.text = "Quantity:\(product.yemek_siparis_adet!)"

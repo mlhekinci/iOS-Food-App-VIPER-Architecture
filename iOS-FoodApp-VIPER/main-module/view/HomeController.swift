@@ -70,8 +70,7 @@ extension HomeController: UICollectionViewDataSource, UICollectionViewDelegate {
         cell.showImage(imageName: food.yemek_resim_adi!)
         cell.title.text = food.yemek_adi!
         
-        cell.layer.cornerRadius = 8
-        cell.layer.borderWidth = 0.5
+        cell.layer.cornerRadius = 15
         cell.layer.borderColor = UIColor.gray.cgColor
         
         return cell
