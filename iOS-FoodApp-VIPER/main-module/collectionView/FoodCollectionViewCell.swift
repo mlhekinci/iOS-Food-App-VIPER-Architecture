@@ -14,8 +14,6 @@ class FoodCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var title: UILabel!
     
         func showImage(imageName: String) {
-            DispatchQueue.main.async {
-                self.image.setNetworkImage(imageName: imageName)
-            }
+            image.setNetworkImage(imageName: imageName)
     }
 }
