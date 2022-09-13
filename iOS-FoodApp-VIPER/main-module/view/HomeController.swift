@@ -33,6 +33,7 @@ class HomeController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         mainPresenterObject?.getFoods()
+        mainPresenterObject?.getFoodCount(userName: "mmlhek")
     }
     
     func setupNavBar() {
@@ -53,6 +54,16 @@ extension HomeController: PresenterToViewMainProtocol {
         self.foodList = foodList
         DispatchQueue.main.async {
             self.collectionView.reloadData()
+        }
+    }
+    
+    func dataToView(foodCount: Int) {
+        let icon = self.navigationItem.rightBarButtonItem
+        
+        if (foodCount >= 1) {
+            icon?.setBadge(text: "\(foodCount)")
+        } else {
+            icon?.removeBadge()
         }
     }
 }

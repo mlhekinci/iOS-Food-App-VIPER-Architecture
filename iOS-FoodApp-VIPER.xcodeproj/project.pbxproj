@@ -36,6 +36,7 @@
 		D4E744C328C621D300E0EF24 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D4E744C228C621D300E0EF24 /* Kingfisher */; };
 		D4E744FC28C644CB00E0EF24 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E744FB28C644CB00E0EF24 /* DetailController.swift */; };
 		D4E7450128C647C200E0EF24 /* ImageEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7450028C647C200E0EF24 /* ImageEx.swift */; };
+		D4FDDA4228CFC1B200DB6BA1 /* BarButtonBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FDDA4128CFC1B200DB6BA1 /* BarButtonBadge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		D4E744B428C61ED900E0EF24 /* FoodCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCollectionViewCell.swift; sourceTree = "<group>"; };
 		D4E744FB28C644CB00E0EF24 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		D4E7450028C647C200E0EF24 /* ImageEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEx.swift; sourceTree = "<group>"; };
+		D4FDDA4128CFC1B200DB6BA1 /* BarButtonBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButtonBadge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				D4E7450028C647C200E0EF24 /* ImageEx.swift */,
+				D4FDDA4128CFC1B200DB6BA1 /* BarButtonBadge.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				D4422F7E28C8DC0C00DC677B /* CartTableViewCell.swift in Sources */,
 				D405503228C79B86005DEAD0 /* CartRouter.swift in Sources */,
 				D405502628C798C9005DEAD0 /* Sepet.swift in Sources */,
+				D4FDDA4228CFC1B200DB6BA1 /* BarButtonBadge.swift in Sources */,
 				D405500F28C7865D005DEAD0 /* DetailInteractor.swift in Sources */,
 				D405501F28C7913D005DEAD0 /* CartController.swift in Sources */,
 				D405502328C7975B005DEAD0 /* CartProtocol.swift in Sources */,

@@ -30,4 +30,20 @@ class MainInteractor : PresenterToInteractorMainProtocol {
             }
         }
     }
+    
+    func getFoodCountOfBasket(userName: String) {
+        let param = ["kullanici_adi": userName]
+        
+        AF.request("http://kasimadalan.pe.hu/yemekler/sepettekiYemekleriGetir.php", method: .post, parameters: param).response { res in
+            if let data = res.data {
+                do {
+                    let result = try JSONDecoder().decode(SepetCevap.self, from: data)
+                    self.mainPresenter?.dataToPresenter(foodCount: result.sepet_yemekler?.count ?? 0)
+                }catch {
+                    print(error.localizedDescription)
+                    self.mainPresenter?.dataToPresenter(foodCount: 0)
+                }
+            }
+        }
+    }
 }

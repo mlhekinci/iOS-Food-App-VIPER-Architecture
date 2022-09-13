@@ -13,20 +13,24 @@ protocol ViewToPresenterMainProtocol {
     var mainView: PresenterToViewMainProtocol? {get set}
     
     func getFoods()
+    func getFoodCount(userName: String)
 }
 
 protocol PresenterToInteractorMainProtocol {
     var mainPresenter: InteractorToPresenterMainProtocol? {get set}
 
     func getFoodList()
+    func getFoodCountOfBasket(userName: String)
 }
 
 protocol InteractorToPresenterMainProtocol {
     func dataToPresenter(foodList: Array<Yemekler>)
+    func dataToPresenter(foodCount: Int)
 }
 
 protocol PresenterToViewMainProtocol {
     func dataToView(foodList: Array<Yemekler>)
+    func dataToView(foodCount: Int)
 }
 
 protocol PresenterToRouterMainProtocol {
