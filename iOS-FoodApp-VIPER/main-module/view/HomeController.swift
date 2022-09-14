@@ -33,7 +33,7 @@ class HomeController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         mainPresenterObject?.getFoods()
-        mainPresenterObject?.getFoodCount(userName: "mmlhek")
+        mainPresenterObject?.getFoodCount(userName: "order_test_user")
     }
     
     func setupNavBar() {
