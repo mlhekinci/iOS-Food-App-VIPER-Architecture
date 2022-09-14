@@ -42,9 +42,30 @@ class DetailController: UIViewController {
     }
     
     @IBAction func addToCartTapped(_ sender: Any) {
-        //MARK: USE if let
-        //MARK: TAKE USERNAME FROM LOGIN MODULE
-        
         detailPresenterObject?.add(yemek_adi: (foods?.yemek_adi)!, yemek_resim_adi: (foods?.yemek_resim_adi)!, yemek_fiyat: (foods?.yemek_fiyat)!, yemek_siparis_adet: Int(self.stepper.value), kullanici_adi: "order_test_user")
+    }
+}
+
+extension DetailController : PresenterToViewDetailProtocol {
+    func dataToView(isSuccess: Bool) {
+
+        print(isSuccess)
+        
+        let alert = UIAlertController(title: "Food Delivery", message: "The product has been successfully added to the cart", preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "Continue Shopping", style: .default) { action in
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+        
+        let cartAction = UIAlertAction(title: "View My Cart", style: .default) {action in
+            self.performSegue(withIdentifier: "toCart", sender: nil)
+        }
+        
+        alert.addAction(okAction)
+        alert.addAction(cartAction)
+        
+        if (isSuccess) {
+            present(alert, animated: true)
+        }
     }
 }

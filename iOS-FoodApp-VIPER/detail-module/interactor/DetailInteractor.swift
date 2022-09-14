@@ -9,6 +9,7 @@ import Foundation
 import Alamofire
 
 class DetailInteractor: PresenterToInteractorDetailProtocol {
+    var detailPresenter: InteractorToPresenterDetailProtocol?
     
     func addToCart(yemek_adi: String, yemek_resim_adi: String, yemek_fiyat: String, yemek_siparis_adet: Int, kullanici_adi: String) {
         
@@ -62,7 +63,11 @@ class DetailInteractor: PresenterToInteractorDetailProtocol {
             if let data = res.data {
                 do {
                     if let response = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                        print(response)
+                        if (response["success"] as? Int == 1) {
+                            self.detailPresenter?.dataToPresenter(isSuccess: true)
+                        }else {
+                            self.detailPresenter?.dataToPresenter(isSuccess: false)
+                        }
                     }
                 }catch {
                     print(error.localizedDescription)

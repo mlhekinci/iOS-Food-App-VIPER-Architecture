@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cAB-QL-5dU">
-                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yOZ-tV-X9g">
                                     <size key="itemSize" width="200" height="275"/>
@@ -78,7 +78,7 @@
                     <navigationItem key="navigationItem" title="Foods" id="ZNw-Ud-QRW">
                         <barButtonItem key="rightBarButtonItem" image="cart.fill" catalog="system" id="qlS-lk-pi5">
                             <connections>
-                                <segue destination="8ZR-KW-m07" kind="show" id="t01-VI-Ler"/>
+                                <segue destination="8ZR-KW-m07" kind="show" identifier="" id="t01-VI-Ler"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -89,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3923" y="596"/>
+            <point key="canvasLocation" x="-6338" y="475"/>
         </scene>
         <!--Detail Controller-->
         <scene sceneID="TMV-SD-1xO">
@@ -183,11 +183,12 @@
                         <outlet property="stepper" destination="OD8-S5-ENW" id="rA9-lm-G1w"/>
                         <outlet property="titleLabel" destination="cQc-Ke-ELd" id="ZSK-fR-7jQ"/>
                         <outlet property="totalPriceLabel" destination="P4A-PC-UBF" id="CH9-Pi-XFE"/>
+                        <segue destination="8ZR-KW-m07" kind="show" identifier="toCart" id="TrK-64-9Bn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jaq-Ah-nVe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3148" y="596"/>
+            <point key="canvasLocation" x="-4646" y="-77"/>
         </scene>
         <!--My Cart-->
         <scene sceneID="IMQ-Ti-jxW">
@@ -292,9 +293,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qTf-tE-OrI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4035" y="-125"/>
+            <point key="canvasLocation" x="-6338" y="-584"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="TrK-64-9Bn"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="cart.fill" catalog="system" width="128" height="102"/>
         <namedColor name="AccentColor">

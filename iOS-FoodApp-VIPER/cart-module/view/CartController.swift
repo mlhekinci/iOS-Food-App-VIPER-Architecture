@@ -19,7 +19,20 @@ class CartController: UIViewController {
         CartRouter.createModule(ref: self)
         cartTableView.delegate = self
         cartTableView.dataSource = self
+        
+        self.navigationItem.hidesBackButton = true
+        let customBackButton = UIBarButtonItem(image: UIImage(systemName: "arrow.backward"), style: .plain, target: self, action: #selector(goToMain))
+        self.navigationItem.leftBarButtonItem = customBackButton
     }
+    
+    // custom back to root vc
+    @objc func goToMain() {
+        for controller in self.navigationController!.viewControllers {
+              if let target = controller as? HomeController {
+                  self.navigationController!.popToViewController(target, animated: true)
+              }
+        }
+      }
     
     override func viewWillAppear(_ animated: Bool) {
         cartPresenterObject?.getAllCart()
